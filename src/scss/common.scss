@@ -1,0 +1,98 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #fafafa;
+$hover-menu-color: #eb5757;
+
+$bg-header: #131417;
+$bg-submenu: #252830;
+
+$color-arrow-orange: #f2994a;
+$shadow-header: rgba(19, 20, 23, 0.4);
+$shadow-mobile-nav: rgba(0, 0, 0, 0.25);
+
+$border-bottom: rgba(255, 255, 255, 0.1);
+$border-bottom-dark-grey: #131417;
+$menu-item-hover: #131417;
+$nav-link-hover: #eb5757;
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  font-family: "Roboto", sans-serif;
+  font: 100% $font-stack;
+  color: $primary-color;
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+ul {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.wrapper {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 109px 0 122px;
+  box-sizing: border-box;
+  @include max_1040 {
+    padding: 0 16px;
+  }
+  @include max_768 {
+    padding: 17px 15px 17px 22px;
+  }
+}
+
+.cover--hidden {
+  display: none;
+}
+
+.border-radius-bottom {
+  border-radius: 0 0 8px 8px;
+}
+
+.clip {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 28px;
+}
+
+.poiner-events--none {
+  pointer-events: none;
+}
+
+.cover {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(19, 20, 23, 0.5);
+  overflow-y: auto;
+}

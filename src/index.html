@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Alpaka header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css">
+</head>
+<body>
+    <header class="header">
+       <div class="container">
+            <img src="./img/logo.svg" alt="logotype Alpaka">
+            <nav class="header__nav">
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__item__link" href="#">Главная</a></li>
+                    <li class="menu__item menu__item__submenu arrow arrow--orange--down"><a class="menu__item__link" href="#">Основное меню</a>
+                        <ul class="header__submenu arrow arrow--grey--up">
+                            <li class="menu__item"><a class="menu__item__link" href=#">Заказать вёрстку</a></li>
+                            <li class="menu__item"><a class="menu__item__link" href="#">Отправить макет на проверку</a></li>
+                            <li class="menu__item"><a class="menu__item__link" href="#">Хочу работать у вас</a></li>
+                            <li class="menu__item menu__item__submenu arrow arrow--orange--left border-radius-bottom">
+                                <a href="#" class="clip menu__item__link">Есть предложение по работе с клиентами</a>
+                                <ul class="header__submenu header__submenu__nested arrow arrow--grey--left">
+                                    <li class="menu__item"><a class="menu__item__link" href="#">У меня есть оффер</a></li>
+                                    <li class="menu__item"><a class="menu__item__link" href="#">Сделать партнёром</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__item__link" href="#">Наши сервисы</a></li>
+                    <li class="menu__item"><a class="menu__item__link" href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="call__link" href="tel:+1 (321) 222 - 33 - 33">
+                <img  class="call__img" src="./img/phone.svg" alt="call">
+                <span>+1 (321) 222 - 33 - 33</span>
+            </a> 
+            <button class="btn__menu" onclick="openMenu();"> 
+              <img  class="menu__img" src="./img/menu.svg" alt="menu">
+            </button>   
+        </div>
+    </header>
+    <div class="wrapper">
+        <img src="./img/alpaca.jpg" alt="background">
+    </div>    
+    <div class="cover cover--hidden" >
+            <nav class="mobile__nav">
+                    <ul class="mobile__menu menu">
+                        <li class="menu__item"><a class="menu__item__link" href="#">Главная</a></li>
+                        <li class="menu__item menu__item__submenu">
+                            <a class="menu__item__link arrow arrow--orange--down poiner-events--none" href="#">Основное меню</a>
+                            <ul class="header__submenu arrow arrow--grey--up">
+                                <li class="menu__item"><a class="menu__item__link" href=#">Заказать вёрстку</a></li>
+                                <li class="menu__item"><a class="menu__item__link" href="#">Отправить макет на проверку</a></li>
+                                <li class="menu__item"><a class="menu__item__link" href="#">Хочу работать у вас</a></li>
+                                <li class="menu__item menu__item__submenu border-radius-bottom border--none">
+                                    <a href="#"class="arrow arrow--orange--down clip menu__item__link poiner-events--none">Есть предложение по работе с клиентами</a>
+                                    <ul class="header__submenu header__submenu__nested">
+                                        <li class="menu__item"><a class="menu__item__link" href="#">У меня есть оффер</a></li>
+                                        <li class="menu__item border--none"><a class="menu__item__link" href="#">Сделать партнёром</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__item"><a class="menu__item__link" href="#">Наши сервисы</a></li>
+                        <li class="menu__item"><a class="menu__item__link" href="#">Контакты</a></li>
+                    </ul>
+            </nav>
+    </div>
+    <script src="./js/bundle.min.js"></script>
+</body>
+</html>

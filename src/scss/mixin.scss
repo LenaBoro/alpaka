@@ -1,0 +1,33 @@
+@mixin max_768 {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+@mixin max_375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+@mixin max_345 {
+  @media (max-width: 345px) {
+    @content;
+  }
+}
+@mixin max_1040 {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+@mixin max_1400 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin font($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  @if $fontWeight != 0 {
+    font-weight: $fontWeight;
+  }
+}

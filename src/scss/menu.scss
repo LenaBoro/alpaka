@@ -1,0 +1,126 @@
+.menu {
+  display: flex;
+  padding-left: 51px;
+  justify-content: space-between;
+
+  &__item {
+    padding: 28px 18px;
+    @include font("18px", "24px", 400);
+
+    &:hover > &__link {
+      color: $nav-link-hover;
+    }
+    @include max_1400 {
+      font-size: 16px;
+    }
+    @include max_1040 {
+      font-size: 14px;
+    }
+    @include max_375 {
+      @include font("18px", "24px", 0);
+    }
+
+    &__link {
+      color: $primary-color;
+    }
+    &__submenu {
+      position: relative;
+    }
+    &__submenu:hover > .header__submenu {
+      display: block;
+    }
+  }
+}
+
+.menu__item__submenu:hover > .menu__item__link,
+.menu__item__submenu:hover {
+  &::before {
+    transform: rotate(180deg);
+  }
+}
+
+.mobile__menu {
+  justify-content: unset;
+  padding: 0;
+  width: 100%;
+  flex-flow: column;
+}
+
+.mobile__nav {
+  background: $bg-header;
+  box-shadow: -4px 0px 4px $shadow-mobile-nav;
+  width: 374px;
+  height: 100vh;
+  display: flex;
+  padding-top: 79px;
+  margin-right: 0;
+  margin-left: auto;
+
+  .menu__item {
+    margin: 0;
+    padding: 0;
+    background: $bg-submenu;
+    border: none;
+    border-bottom: 1px solid $border-bottom-dark-grey;
+    @include font("18px", "24px", 400);
+
+    &:hover {
+      background: $menu-item-hover;
+    }
+  }
+  .menu__item__link {
+    display: block;
+    padding: 20px 18px 19px;
+    width: fit-content;
+  }
+
+  .header__submenu,
+  .header__submenu__nested {
+    display: none;
+    background: $bg-submenu;
+    position: relative;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+
+    .menu__item {
+      background: $bg-submenu;
+      border-radius: 0;
+      margin: 0;
+      border-color: $border-bottom-dark-grey;
+      padding: 0;
+      @include font("16px", "24px", 400);
+      &:hover {
+        background: $menu-item-hover;
+      }
+    }
+    .menu__item__link {
+      @include max_345 {
+        max-width: 265px;
+      }
+    }
+  }
+
+  .arrow--orange--down {
+    position: relative;
+    &::before {
+      top: 25px;
+      right: 1px;
+      bottom: auto;
+    }
+  }
+}
+.btn__menu {
+  display: none;
+  @include max_768 {
+    display: block;
+  }
+}
+
+.menu__item.border--none,
+.menu__item__submenu.border--none {
+  border: none;
+}
